@@ -5,10 +5,8 @@ import Textbox from "../Textbox";
 import Button from "../Button";
 import { useCreateSubtaskMutation } from "../../redux/slices/api/taskApiSlice";
 import { toast } from "sonner";
-<<<<<<< HEAD
-=======
 
->>>>>>> ca7beb1f0d15556ca5acb3d20a1def022fab9e12
+
 const AddSubTask = ({ open, setOpen, id }) => {
   const {
     register,
