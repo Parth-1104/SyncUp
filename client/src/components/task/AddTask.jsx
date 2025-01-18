@@ -11,6 +11,7 @@ import { getStorage, ref, getDownloadURL, uploadBytesResumable } from "firebase/
 import { app } from "../../utils/firebase";
 import { useCreateTaskMutation, useUpdateTaskMutation } from "../../redux/slices/api/taskApiSlice";
 import { toast } from "sonner";
+import { dateFormatter } from "../../utils";
 
 const LISTS = ["TODO", "IN PROGRESS", "COMPLETED"];
 const PRIORIRY = ["HIGH", "MEDIUM", "NORMAL", "LOW"];
@@ -18,6 +19,17 @@ const PRIORIRY = ["HIGH", "MEDIUM", "NORMAL", "LOW"];
 const uploadedFileURLs = [];
 
 const AddTask = ({ open, setOpen, task }) => {
+  const defaultValues={
+    title:task?.title||"",
+    data:dateFormatter(task?.data||new Date()),
+    team:[],
+    stage:"",
+    priority:"",
+    assets:[],
+  }
+  
+  
+  
   const {
     register,
     handleSubmit,
