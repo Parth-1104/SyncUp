@@ -82,7 +82,7 @@ const Login = () => {
               type='email'
               name='email'
               label='Email Address'
-              className='w-full rounded-full'
+              className='w-full rounded-full text-white'
               register={register("email", {
                 required: "Email Address is required!",
               })}
@@ -93,7 +93,7 @@ const Login = () => {
               type='password'
               name='password'
               label='Password'
-              className='w-full rounded-full'
+              className='w-full rounded-full text-white'
               register={register("password", {
                 required: "Password is required!",
               })}
