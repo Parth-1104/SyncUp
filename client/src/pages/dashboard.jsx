@@ -164,7 +164,7 @@ const Dashboard = () => {
     {
       _id: "1",
       label: "TOTAL TASKS",
-      total: summary?.totalTasks || 0,
+      total: data?.totalTasks || 0,
       icon: <FaNewspaper />,
       bg: "bg-[#1d4ed8]",
     },
