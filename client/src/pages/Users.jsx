@@ -10,7 +10,6 @@ import AddUser from "../components/AddUser";
 import { useDeleteUserMutation, useGetTeamListQuery, useUserActionMutation } from "../redux/slices/api/userApiSlice";
 import { toast } from "sonner";
 
-
 const Users = () => {
   const [openDialog, setOpenDialog] = useState(false);
   const [open, setOpen] = useState(false);
@@ -20,8 +19,6 @@ const Users = () => {
   // console.log(data,error);
   const [deleteUser]=useDeleteUserMutation();
   const[userAction]=useUserActionMutation();
-
-
 
   const userActionHandler = async() => {
     try{
@@ -72,9 +69,10 @@ const Users = () => {
     setSelected(el);
     setOpenAction(true);
   };
+
   const TableHeader = () => (
     <thead className='border-b border-gray-300'>
-      <tr className='text-black text-left'>
+      <tr className='text-[#f7f7f7] text-left'>
         <th className='py-2'>Full Name</th>
         <th className='py-2'>Title</th>
         <th className='py-2'>Email</th>
@@ -85,7 +83,7 @@ const Users = () => {
   );
 
   const TableRow = ({ user }) => (
-    <tr className='border-b border-gray-200 text-gray-600 hover:bg-gray-400/10'>
+    <tr className='border-b border-gray-200 text-[#9f9f9f] hover:bg-gray-400/10'>
       <td className='p-2'>
         <div className='flex items-center gap-3'>
           <div className='w-9 h-9 rounded-full text-white flex items-center justify-center text-sm bg-blue-700'>
@@ -106,7 +104,7 @@ const Users = () => {
           onClick={() => userStatusClick(user)}
           className={clsx(
             "w-fit px-4 py-1 rounded-full",
-            user?.isActive ? "bg-blue-200" : "bg-yellow-100"
+            user?.isActive ? "bg-[#2C5F2C]" : "bg-[#7C847C]"
           )}
         >
           {user?.isActive ? "Active" : "Disabled"}
@@ -115,7 +113,7 @@ const Users = () => {
 
       <td className='p-2 flex gap-4 justify-end'>
         <Button
-          className='text-blue-700 hover:text-blue-500 font-semibold sm:px-0'
+          className='text-blue-600 hover:text-blue-500 font-semibold sm:px-0'
           label='Edit'
           type='button'
           onClick={() => editClick(user)}
@@ -133,18 +131,18 @@ const Users = () => {
 
   return (
     <>
-      <div className='w-full md:px-1 px-0 mb-6'>
+      <div className='min-h-[100vh] w-[79.45vw] m-[-17px] p-4 bg-[#1F1E1E] '>
         <div className='flex items-center justify-between mb-8'>
           <Title title='  Team Members' />
           <Button
             label='Add New User'
             icon={<IoMdAdd className='text-lg' />}
-            className='flex flex-row-reverse gap-1 items-center bg-blue-600 text-white rounded-md 2xl:py-2.5'
+            className='flex flex-row-reverse gap-1 items-center bg-[#ed8247] text-[#ffffff] rounded-md 2xl:py-2.5'
             onClick={() => setOpen(true)}
           />
         </div>
 
-        <div className='bg-white px-2 md:px-4 py-4 shadow-md rounded'>
+        <div className='bg-[#282828] px-2 md:px-4 py-4 shadow-md rounded'>
           <div className='overflow-x-auto'>
             <table className='w-full mb-5'>
               <TableHeader />
