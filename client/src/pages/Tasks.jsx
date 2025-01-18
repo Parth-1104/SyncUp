@@ -14,6 +14,7 @@ import Table from "../components/task/Table";
 import AddTask from "../components/task/AddTask";
 import { useGetAllTaskQuery } from "../redux/slices/api/taskApiSlice";
 
+
 const TABS = [
   { title: "Board View", icon: <MdGridView /> },
   { title: "List View", icon: <FaList /> },
@@ -33,8 +34,8 @@ const Tasks = () => {
   // const [loading, setLoading] = useState(false);
 
   const status = params?.status || "";
-  const {data,isLoading}=useGetAllTaskQuery({
-    strQuery:status,isTrashed: "",search:"",
+  const { data, isLoading } = useGetAllTaskQuery({
+    strQuery: status, isTrashed: "", search: "",
   })
 
   return isLoading ? (
@@ -42,7 +43,7 @@ const Tasks = () => {
       <Loading />
     </div>
   ) : (
-    <div className='w-full'>
+    <div className='min-h-[100vh] w-[79.45vw] m-[-17px] p-4 bg-[#1F1E1E]'>
       <div className='flex items-center justify-between mb-4'>
         <Title title={status ? `${status} Tasks` : "Tasks"} />
 
@@ -51,7 +52,7 @@ const Tasks = () => {
             onClick={() => setOpen(true)}
             label='Create Task'
             icon={<IoMdAdd className='text-lg' />}
-            className='flex flex-row-reverse gap-1 items-center bg-blue-600 text-white rounded-md py-2 2xl:py-2.5'
+            className='flex flex-row-reverse gap-1 items-center bg-[#282828] text-[#9f9f9f] rounded-md py-2 2xl:py-2.5'
           />
         )}
       </div>
