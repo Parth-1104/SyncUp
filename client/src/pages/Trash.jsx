@@ -54,7 +54,7 @@ const Trash = () => {
 
   const TableHeader = () => (
     <thead className='border-b border-gray-300'>
-      <tr className='text-black  text-left'>
+      <tr className='text-[#f7f7f7]  text-left'>
         <th className='py-2'>Task Title</th>
         <th className='py-2'>Priority</th>
         <th className='py-2'>Stage</th>
@@ -64,13 +64,13 @@ const Trash = () => {
   );
 
   const TableRow = ({ item }) => (
-    <tr className='border-b border-gray-200 text-gray-600 hover:bg-gray-400/10'>
+    <tr className='border-b border-gray-200 text-[#9f9f9f] hover:bg-gray-400/10'>
       <td className='py-2'>
         <div className='flex items-center gap-2'>
           <div
             className={clsx("w-4 h-4 rounded-full", TASK_TYPE[item.stage])}
           />
-          <p className='w-full line-clamp-2 text-base text-black'>
+          <p className='w-full line-clamp-2 text-base text-[#f7f7f7]'>
             {item?.title}
           </p>
         </div>
@@ -105,7 +105,7 @@ const Trash = () => {
 
   return (
     <>
-      <div className='w-full md:px-1 px-0 mb-6'>
+      <div className='min-h-[100vh] w-[79.45vw] m-[-17px] p-4 bg-[#1F1E1E]'>
         <div className='flex items-center justify-between mb-8'>
           <Title title='Trashed Tasks' />
 
@@ -113,7 +113,7 @@ const Trash = () => {
             <Button
               label='Restore All'
               icon={<MdOutlineRestore className='text-lg hidden md:flex' />}
-              className='flex flex-row-reverse gap-1 items-center  text-black text-sm md:text-base rounded-md 2xl:py-2.5'
+              className='flex flex-row-reverse gap-1 items-center  text-[#ed8247] text-sm md:text-base rounded-md 2xl:py-2.5'
               onClick={() => restoreAllClick()}
             />
             <Button
@@ -124,7 +124,7 @@ const Trash = () => {
             />
           </div>
         </div>
-        <div className='bg-white px-2 md:px-6 py-4 shadow-md rounded'>
+        <div className='bg-[#282828] px-2 md:px-6 py-4 shadow-md rounded'>
           <div className='overflow-x-auto'>
             <table className='w-full mb-5'>
               <TableHeader />
