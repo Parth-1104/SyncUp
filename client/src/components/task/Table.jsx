@@ -58,7 +58,7 @@ const Table = ({ tasks }) => {
 
   const TableHeader = () => (
     <thead className='w-full border-b border-gray-300'>
-      <tr className='w-full text-black  text-left'>
+      <tr className='w-full text-white  text-left'>
         <th className='py-2'>Task Title</th>
         <th className='py-2'>Priority</th>
         <th className='py-2 line-clamp-1'>Created At</th>
@@ -69,13 +69,13 @@ const Table = ({ tasks }) => {
   );
 
   const TableRow = ({ task }) => (
-    <tr className='border-b border-gray-200 text-gray-600 hover:bg-gray-300/10'>
+    <tr className='border-b border-gray-200 text-[#9f9f9f] hover:bg-gray-300/10'>
       <td className='py-2'>
         <div className='flex items-center gap-2'>
           <div
             className={clsx("w-4 h-4 rounded-full", TASK_TYPE[task.stage])}
           />
-          <p className='w-full line-clamp-2 text-base text-black'>
+          <p className='w-full line-clamp-2 text-base text-[#f7f7f7]'>
             {task?.title}
           </p>
         </div>
@@ -150,7 +150,7 @@ const Table = ({ tasks }) => {
   );
   return (
     <>
-      <div className='bg-white  px-2 md:px-4 pt-4 pb-9 shadow-md rounded'>
+      <div className='bg-[#282828] px-2 md:px-4 py-4 shadow-md rounded'>
         <div className='overflow-x-auto'>
           <table className='w-full '>
             <TableHeader />
