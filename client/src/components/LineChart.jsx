@@ -9,7 +9,7 @@ import {
   Legend,
   ResponsiveContainer,
 } from "recharts";
-import { chartData } from "../assets/data"; // Importing data
+import { chartData } from "../assets/data";
 
 export const LineChartComponent = () => {
   return (
