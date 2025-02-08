@@ -35,7 +35,7 @@ const Login = () => {
   };
 
   const handleDemoLogin = () => {
-    setValue("email", "parthOp@gmail.com");
+    setValue("email", "admin@gmail.com");
     setValue("password", "123456");
   };
 

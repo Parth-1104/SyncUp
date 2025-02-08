@@ -164,7 +164,7 @@ const Dashboard = () => {
     {
       _id: "2",
       label: "COMPLETED TASKS",
-      total: totals["completed"] || 0,
+      total: data?.completed || 0,
       icon: <MdAdminPanelSettings />,
       bg: "bg-[#0f766e]",
     },
