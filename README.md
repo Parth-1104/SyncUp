@@ -44,4 +44,5 @@ SyncUp is a cloud-based task management platform designed to enhance team collab
 | **VideoSDK API** | Real-time video call integration |
 
 ---
+![image](https://github.com/user-attachments/assets/5447fe50-0943-4d4e-97e9-34606c62e475)
 
